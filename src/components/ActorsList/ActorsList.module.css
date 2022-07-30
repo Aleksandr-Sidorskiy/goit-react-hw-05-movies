@@ -1,0 +1,17 @@
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+}
+
+.item{
+    width: calc((100% - 10px * 8) / 4);
+    margin: 10px;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    height: 375px;
+    margin-bottom: 15px;
+}
