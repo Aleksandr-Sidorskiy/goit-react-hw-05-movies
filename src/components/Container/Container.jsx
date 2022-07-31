@@ -1,17 +1,13 @@
-import { PropTypes } from "prop-types";
-import css from './Container.module.css';
+import propTypes from 'prop-types';
+import { ContainerWrapper } from './Container.styled';
 
-
-const Container = ({children}) => {
-    return (
-        <div className={css.wrapper}>
-            {children}
-        </div>
-    )
+function Container({ children, isPadding }) {
+  return <ContainerWrapper isPadding={isPadding}>{children}</ContainerWrapper>;
 }
 
-Container.propTypes = {
-    children: PropTypes.element,
+Container.prototype = {
+  children: propTypes.element,
+  isPadding: propTypes.bool,
 };
 
 export default Container;
