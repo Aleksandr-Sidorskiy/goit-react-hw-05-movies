@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Container from 'components/Container';
 import { List, Item, Title, Text } from './ReviewsList.styled';
 
@@ -20,13 +20,13 @@ function ReviewsList({ reviews }) {
 }
 
 ReviewsList.prototype = {
-  reviews: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.string,
-      author: propTypes.string,
-      text: propTypes.string,
+  reviews: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
     }),
-  ).isRequired,
+  ),
 };
 
 export default ReviewsList;

@@ -1,9 +1,10 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import actorBg from '../../utilities/images/actor.png';
 import Container from 'components/Container';
 import { List, Item, PhotoWrapper, Photo, Name } from './ActorsList.styled';
 
 function ActorsList({ actors }) {
+  // console.log({ actors });
   return (
     <Container isPadding>
       <List>
@@ -28,13 +29,13 @@ function ActorsList({ actors }) {
 }
 
 ActorsList.prototype = {
-  actors: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.number,
-      name: propTypes.string,
-      photo: propTypes.string,
+  actors: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      photo: PropTypes.string.isRequired,
     }),
-  ).isRequired,
+  ),
 };
 
 export default ActorsList;

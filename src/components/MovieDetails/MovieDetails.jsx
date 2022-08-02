@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import posterBg from '../../utilities/images/poster.jpg';
 import Container from 'components/Container';
 import {
@@ -98,19 +98,19 @@ function MovieDetails({ movieInfo }) {
 }
 
 MovieDetails.prototype = {
-  movieInfo: propTypes.shape({
-    title: propTypes.string,
-    genres: propTypes.arrayOf(
-      propTypes.shape({
-        id: propTypes.number,
-        name: propTypes.string,
+  movieInfo: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
       }),
     ),
-    description: propTypes.string,
-    poster: propTypes.string,
-    releaseDate: propTypes.string,
-    voteAverage: propTypes.number,
-    voteCount: propTypes.number,
+    description: PropTypes.string.isRequired,
+    poster: PropTypes.string.isRequired,
+    releaseDate: PropTypes.string.isRequired,
+    voteAverage: PropTypes.number.isRequired,
+    voteCount: PropTypes.number.isRequired,
   }),
 };
 

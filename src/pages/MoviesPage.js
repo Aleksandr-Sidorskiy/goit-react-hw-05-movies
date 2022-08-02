@@ -8,6 +8,7 @@ import MoviesList from 'components/MoviesList';
 function MoviesPage() {
   const { search } = useLocation();
   const query = new URLSearchParams(search).get('query') ?? '';
+  
 
   const [movies, setMovies] = useState(null);
 

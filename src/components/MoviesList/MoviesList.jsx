@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import MovieCard from 'components/MovieCard';
 import { Wrapper } from './MoviesList.styled';
 
@@ -16,19 +16,21 @@ function MoviesList({ movies }) {
             voteCount={voteCount}
           />
         );
-      })}
+        })
+      
+      }
     </Wrapper>
   );
 }
 
 MoviesList.prototype = {
-  movies: propTypes.arrayOf(
-    propTypes.shape({
-      id: propTypes.number,
-      title: propTypes.string,
-      poster: propTypes.string,
-      voteAverage: propTypes.number,
-      voteCount: propTypes.number,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      poster: PropTypes.string.isRequired,
+      voteAverage: PropTypes.number.isRequired,
+      voteCount: PropTypes.number.isRequired,
     }),
   ).isRequired,
 };

@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { ContainerWrapper } from './Container.styled';
 
 function Container({ children, isPadding }) {
@@ -6,8 +6,8 @@ function Container({ children, isPadding }) {
 }
 
 Container.prototype = {
-  children: propTypes.element,
-  isPadding: propTypes.bool,
+  children: PropTypes.element.isRequired,
+  isPadding: PropTypes.bool.isRequired,
 };
 
 export default Container;

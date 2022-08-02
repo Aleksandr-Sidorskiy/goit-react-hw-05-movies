@@ -10,11 +10,14 @@ function SearchBar() {
   function onSubmitForm(e) {
     e.preventDefault();
     const value = e.target.elements.query.value;
-
-    navigate({
-      ...location,
-      search: `query=${value}`,
-    });
+    
+      navigate({
+        ...location,
+        search: `query=${value}`,
+      });
+   
+    
+  
   }
 
   return (

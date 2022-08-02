@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import posterBg from '../../utilities/images/poster.jpg';
 import {
   Item,
@@ -36,11 +36,11 @@ function MovieCard({ id, title, poster, voteAverage, voteCount }) {
 }
 
 MovieCard.prototype = {
-  id: propTypes.number,
-  title: propTypes.string,
-  poster: propTypes.string,
-  voteAverage: propTypes.number,
-  voteCount: propTypes.number,
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
+  voteAverage: PropTypes.number.isRequired,
+  voteCount: PropTypes.number.isRequired,
 };
 
 export default MovieCard;
